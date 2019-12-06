@@ -2,9 +2,9 @@ package com.example.nytimesdemo.di.module;
 
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.nytimesdemo.data.remote.APIInterface;
-import com.example.nytimesdemo.data.remote.ArticleNetworkManager;
-import com.example.nytimesdemo.data.repository.ArticleRepository;
+import com.example.nytimesdemo.model.remote.APIInterface;
+import com.example.nytimesdemo.model.remote.ArticleNetworkManager;
+import com.example.nytimesdemo.model.repository.ArticleRepository;
 import com.example.nytimesdemo.di.scope.ArticleScope;
 import com.example.nytimesdemo.viewmodel.CustomViewModelFactory;
 

@@ -3,7 +3,7 @@ package com.example.nytimesdemo.di.module;
 
 
 import com.example.nytimesdemo.BuildConfig;
-import com.example.nytimesdemo.data.remote.APIInterface;
+import com.example.nytimesdemo.model.remote.APIInterface;
 
 import javax.inject.Singleton;
 

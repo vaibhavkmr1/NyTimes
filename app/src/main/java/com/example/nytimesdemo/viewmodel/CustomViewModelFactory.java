@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.nytimesdemo.data.repository.ArticleRepository;
+import com.example.nytimesdemo.model.repository.ArticleRepository;
 
 public class CustomViewModelFactory implements ViewModelProvider.Factory {
     private ArticleRepository articleRepository;

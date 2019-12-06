@@ -1,4 +1,4 @@
-package com.example.nytimesdemo.data.remote;
+package com.example.nytimesdemo.model.remote;
 
 import com.example.nytimesdemo.dao.Articles;
 

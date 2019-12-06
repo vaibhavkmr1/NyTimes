@@ -1,4 +1,4 @@
-package com.example.nytimesdemo.data.remote;
+package com.example.nytimesdemo.model.remote;
 
 import android.util.Log;
 
@@ -15,10 +15,15 @@ public class ArticleNetworkManager {
     private APIInterface apiInterface;
     private Articles articles;
 
-    public ArticleNetworkManager(APIInterface apiInterface){
-        this.apiInterface=apiInterface;
+    public ArticleNetworkManager(APIInterface apiInterface) {
+        this.apiInterface = apiInterface;
     }
 
+    /**
+     * Get articles from server through API
+     *
+     * @return
+     */
     public MutableLiveData<Articles> getArticles() {
         final MutableLiveData<Articles> articlesMutableLiveData = new MutableLiveData<>();
         Call<Articles> call = apiInterface.getArticles("ByPGKWu7cDKZiihtoeFKu7AnQEzX4BW1");
@@ -27,7 +32,7 @@ public class ArticleNetworkManager {
             public void onResponse(Call<Articles> call, Response<Articles> response) {
                 Log.d("articles", String.valueOf(response.body()));
                 if (response != null && response.isSuccessful()) {
-                    articles=response.body();
+                    articles = response.body();
                     articlesMutableLiveData.setValue(articles);
                 }
             }
