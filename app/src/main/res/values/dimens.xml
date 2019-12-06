@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top">8dp</dimen>
+    <dimen name="padding_textview">10dp</dimen>
+    <dimen name="circle_width">50dp</dimen>
+    <dimen name="circle_hieght">50dp</dimen>
+    <dimen name="margin_start">16dp</dimen>
+    <dimen name="margin_bottom">16dp</dimen>
+    <dimen name="arrow_width">25dp</dimen>
+    <dimen name="arrow_height">25dp</dimen>
+    <dimen name="margin_end">16dp</dimen>
+    <dimen name="title_margin_start">8dp</dimen>
+    <dimen name="title_margin_end">8dp</dimen>
+    <dimen name="margin_short">8dp</dimen>
+</resources>

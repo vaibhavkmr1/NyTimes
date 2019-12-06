@@ -19,8 +19,9 @@ public class ArticleRepository {
      * get articles from network manager
      *
      * @return
+     * @param mutableLiveDataError
      */
-    public MutableLiveData<Articles> getArticles() {
-        return articleNetworkManager.getArticles();
+    public MutableLiveData<Articles> getArticles(MutableLiveData<String> mutableLiveDataError) {
+        return articleNetworkManager.getArticles(mutableLiveDataError);
     }
 }

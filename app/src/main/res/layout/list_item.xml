@@ -6,21 +6,21 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/imageViewCircle"
+        android:layout_width="@dimen/circle_width"
+        android:layout_height="@dimen/circle_hieght"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginBottom="@dimen/margin_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_circular_shape_silhouette" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/imageViewArrow"
+        android:layout_width="@dimen/arrow_width"
+        android:layout_height="@dimen/arrow_height"
+        android:layout_marginEnd="@dimen/margin_end"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,37 +30,34 @@
         android:id="@+id/title_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/title_margin_start"
+        android:layout_marginTop="@dimen/margin_start"
+        android:layout_marginEnd="@dimen/title_margin_end"
         android:ellipsize="end"
         android:maxLines="2"
         android:textStyle="bold"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCircle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/by_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        android:layout_marginStart="@dimen/margin_start"
+        android:layout_marginTop="@dimen/margin_short"
+        android:layout_marginEnd="@dimen/margin_short"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCircle"
         app:layout_constraintTop_toBottomOf="@+id/title_textview" />
 
     <TextView
         android:id="@+id/date_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:layout_marginEnd="@dimen/margin_short"
+        android:layout_marginBottom="@dimen/margin_short"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewArrow"
         app:layout_constraintTop_toBottomOf="@+id/by_textview" />
 </androidx.constraintlayout.widget.ConstraintLayout>

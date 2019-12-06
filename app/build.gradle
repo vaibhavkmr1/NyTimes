@@ -21,6 +21,7 @@ android {
     buildTypes {
         debug {
             buildConfigField "String", "BASE_URL", '"https://api.nytimes.com/svc/"'
+            buildConfigField "String", "API_KEY", '"ByPGKWu7cDKZiihtoeFKu7AnQEzX4BW1"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
@@ -28,6 +29,8 @@ android {
 
         release {
             buildConfigField "String", "BASE_URL", '"https://api.nytimes.com/svc/"'
+            buildConfigField "String", "API_KEY", '"ByPGKWu7cDKZiihtoeFKu7AnQEzX4BW1"'
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

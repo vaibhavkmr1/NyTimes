@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
@@ -18,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.example.nytimesdemo.NyDemoApplication;
 import com.example.nytimesdemo.R;
@@ -73,13 +75,34 @@ public class ArticleListFragment extends Fragment implements ItemClickListner {
             recyclerView.setAdapter(articleListAdapter);
             progressBar.setVisibility(View.INVISIBLE);
         });
+        setObserver();
     }
 
+
+    private void setObserver() {
+        articlesViewModel.stateMutableLiveData.observe(this, new Observer<ArticlesViewModel.state>() {
+            @Override
+            public void onChanged(ArticlesViewModel.state state) {
+                if (state == ArticlesViewModel.state.SHOW_ERROR_DAILOG) {
+                    progressBar.setVisibility(View.INVISIBLE);
+                    Toast.makeText(mContext, articlesViewModel.mutableLiveDataError.getValue(), Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+    }
+
+    /**
+     * Handle item click and send data to detail fragment
+     *
+     * @param detail
+     * @param title
+     */
     @Override
-    public void onItemClicked(String detail,String title) {
+    public void onItemClicked(String detail, String title) {
         Bundle bundle = new Bundle();
         bundle.putString("detail", detail);
-        bundle.putString("title",title);
+        bundle.putString("title", title);
         navController.navigate(R.id.action_articleListFragment_to_articleDetailFragment, bundle);
     }
 }

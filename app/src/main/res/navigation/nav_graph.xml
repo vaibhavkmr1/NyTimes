@@ -19,8 +19,5 @@
         android:name="com.example.nytimesdemo.view.ui.ArticleDetailFragment"
         android:label="fragment_article_detail"
         tools:layout="@layout/fragment_article_detail" >
-        <argument
-            android:name="detail"
-            app:argType="string" />
     </fragment>
 </navigation>
